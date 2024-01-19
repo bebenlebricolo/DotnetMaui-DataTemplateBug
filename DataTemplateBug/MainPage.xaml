@@ -2,13 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:datamodels="clr-namespace:DataTemplateBug"
+             xmlns:system="clr-namespace:System;assembly=System.Runtime"
              x:Class="DataTemplateBug.MainPage">
 
     <CollectionView x:DataType="datamodels:CustomViewModel"
         ItemsSource="{Binding Data}">
         
         <CollectionView.ItemTemplate>
-            <DataTemplate> <!-- Broken state -->
+            <DataTemplate x:DataType="system:String"> <!-- Functional state -->
                 <Label Text="{Binding .}"/>
             </DataTemplate>
         </CollectionView.ItemTemplate>
