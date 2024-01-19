@@ -1,0 +1,8 @@
+.idea
+bin
+obj
+Release
+Debug
+[Bb]uild
+.vscode
+.vs
